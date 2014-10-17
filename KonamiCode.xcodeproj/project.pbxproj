@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F6F779719F1059E0026F906 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F779619F1059E0026F906 /* AppDelegate.swift */; };
+		7F6F779919F1059E0026F906 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F779819F1059E0026F906 /* ViewController.swift */; };
+		7F6F779C19F1059E0026F906 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F6F779A19F1059E0026F906 /* Main.storyboard */; };
+		7F6F779E19F1059E0026F906 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6F779D19F1059E0026F906 /* Images.xcassets */; };
+		7F6F77A119F1059E0026F906 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F6F779F19F1059E0026F906 /* LaunchScreen.xib */; };
+		7F6F77AD19F1059E0026F906 /* KonamiCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6F77AC19F1059E0026F906 /* KonamiCodeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F6F77A719F1059E0026F906 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F6F778919F1059E0026F906 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F6F779019F1059E0026F906;
+			remoteInfo = KonamiCode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7F6F779119F1059E0026F906 /* KonamiCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KonamiCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F6F779519F1059E0026F906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F6F779619F1059E0026F906 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7F6F779819F1059E0026F906 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F6F779B19F1059E0026F906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7F6F779D19F1059E0026F906 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7F6F77A019F1059E0026F906 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7F6F77A619F1059E0026F906 /* KonamiCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KonamiCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F6F77AB19F1059E0026F906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F6F77AC19F1059E0026F906 /* KonamiCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonamiCodeTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F6F778E19F1059E0026F906 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F6F77A319F1059E0026F906 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F6F778819F1059E0026F906 = {
+			isa = PBXGroup;
+			children = (
+				7F6F779319F1059E0026F906 /* KonamiCode */,
+				7F6F77A919F1059E0026F906 /* KonamiCodeTests */,
+				7F6F779219F1059E0026F906 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F6F779219F1059E0026F906 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F6F779119F1059E0026F906 /* KonamiCode.app */,
+				7F6F77A619F1059E0026F906 /* KonamiCodeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F6F779319F1059E0026F906 /* KonamiCode */ = {
+			isa = PBXGroup;
+			children = (
+				7F6F779619F1059E0026F906 /* AppDelegate.swift */,
+				7F6F779819F1059E0026F906 /* ViewController.swift */,
+				7F6F779A19F1059E0026F906 /* Main.storyboard */,
+				7F6F779D19F1059E0026F906 /* Images.xcassets */,
+				7F6F779F19F1059E0026F906 /* LaunchScreen.xib */,
+				7F6F779419F1059E0026F906 /* Supporting Files */,
+			);
+			path = KonamiCode;
+			sourceTree = "<group>";
+		};
+		7F6F779419F1059E0026F906 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F6F779519F1059E0026F906 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F6F77A919F1059E0026F906 /* KonamiCodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F6F77AC19F1059E0026F906 /* KonamiCodeTests.swift */,
+				7F6F77AA19F1059E0026F906 /* Supporting Files */,
+			);
+			path = KonamiCodeTests;
+			sourceTree = "<group>";
+		};
+		7F6F77AA19F1059E0026F906 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F6F77AB19F1059E0026F906 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F6F779019F1059E0026F906 /* KonamiCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6F77B019F1059E0026F906 /* Build configuration list for PBXNativeTarget "KonamiCode" */;
+			buildPhases = (
+				7F6F778D19F1059E0026F906 /* Sources */,
+				7F6F778E19F1059E0026F906 /* Frameworks */,
+				7F6F778F19F1059E0026F906 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KonamiCode;
+			productName = KonamiCode;
+			productReference = 7F6F779119F1059E0026F906 /* KonamiCode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7F6F77A519F1059E0026F906 /* KonamiCodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F6F77B319F1059E0026F906 /* Build configuration list for PBXNativeTarget "KonamiCodeTests" */;
+			buildPhases = (
+				7F6F77A219F1059E0026F906 /* Sources */,
+				7F6F77A319F1059E0026F906 /* Frameworks */,
+				7F6F77A419F1059E0026F906 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F6F77A819F1059E0026F906 /* PBXTargetDependency */,
+			);
+			name = KonamiCodeTests;
+			productName = KonamiCodeTests;
+			productReference = 7F6F77A619F1059E0026F906 /* KonamiCodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F6F778919F1059E0026F906 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Plopix;
+				TargetAttributes = {
+					7F6F779019F1059E0026F906 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					7F6F77A519F1059E0026F906 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 7F6F779019F1059E0026F906;
+					};
+				};
+			};
+			buildConfigurationList = 7F6F778C19F1059E0026F906 /* Build configuration list for PBXProject "KonamiCode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F6F778819F1059E0026F906;
+			productRefGroup = 7F6F779219F1059E0026F906 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F6F779019F1059E0026F906 /* KonamiCode */,
+				7F6F77A519F1059E0026F906 /* KonamiCodeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F6F778F19F1059E0026F906 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F6F779C19F1059E0026F906 /* Main.storyboard in Resources */,
+				7F6F77A119F1059E0026F906 /* LaunchScreen.xib in Resources */,
+				7F6F779E19F1059E0026F906 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F6F77A419F1059E0026F906 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F6F778D19F1059E0026F906 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F6F779919F1059E0026F906 /* ViewController.swift in Sources */,
+				7F6F779719F1059E0026F906 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F6F77A219F1059E0026F906 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F6F77AD19F1059E0026F906 /* KonamiCodeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F6F77A819F1059E0026F906 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F6F779019F1059E0026F906 /* KonamiCode */;
+			targetProxy = 7F6F77A719F1059E0026F906 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7F6F779A19F1059E0026F906 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F6F779B19F1059E0026F906 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7F6F779F19F1059E0026F906 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F6F77A019F1059E0026F906 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F6F77AE19F1059E0026F906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7F6F77AF19F1059E0026F906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F6F77B119F1059E0026F906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KonamiCode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7F6F77B219F1059E0026F906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KonamiCode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7F6F77B419F1059E0026F906 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KonamiCodeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KonamiCode.app/KonamiCode";
+			};
+			name = Debug;
+		};
+		7F6F77B519F1059E0026F906 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KonamiCodeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KonamiCode.app/KonamiCode";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F6F778C19F1059E0026F906 /* Build configuration list for PBXProject "KonamiCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6F77AE19F1059E0026F906 /* Debug */,
+				7F6F77AF19F1059E0026F906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F6F77B019F1059E0026F906 /* Build configuration list for PBXNativeTarget "KonamiCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6F77B119F1059E0026F906 /* Debug */,
+				7F6F77B219F1059E0026F906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7F6F77B319F1059E0026F906 /* Build configuration list for PBXNativeTarget "KonamiCodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F6F77B419F1059E0026F906 /* Debug */,
+				7F6F77B519F1059E0026F906 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F6F778919F1059E0026F906 /* Project object */;
+}
