@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(recognizer)        
     }
     
-    func launchEasterEgg(recognizer: UITapGestureRecognizer) {
+    func launchEasterEgg(recognizer: UIGestureRecognizer) {
         if ( recognizer.state == .Ended ) {
             stateLabel.text = "Yeah you did it!"
         }
