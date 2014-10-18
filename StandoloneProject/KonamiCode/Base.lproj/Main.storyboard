@@ -25,9 +25,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PlopixKonamiCode" translatesAutoresizingMaskIntoConstraints="NO" id="4u1-op-gYD">
+                                <rect key="frame" x="16" y="67" width="568" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="h6X-Fp-egv"/>
+                                </constraints>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="6" y="67" width="386" height="128"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bhK-qq-qQC" firstAttribute="top" secondItem="4u1-op-gYD" secondAttribute="bottom" constant="58" id="5B3-V4-5w9"/>
+                            <constraint firstItem="4u1-op-gYD" firstAttribute="centerX" secondItem="bhK-qq-qQC" secondAttribute="centerX" id="BKC-WP-ggG"/>
+                            <constraint firstItem="4u1-op-gYD" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="47" id="CNJ-Gn-jcq"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="bhK-qq-qQC" secondAttribute="bottom" constant="254" id="TOg-cT-7r8"/>
                             <constraint firstItem="bhK-qq-qQC" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="V9J-iy-yrq"/>
                             <constraint firstItem="bhK-qq-qQC" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="233" id="vDw-ZK-WBr"/>
@@ -39,7 +51,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="303.75" y="354.92957746478874"/>
+            <point key="canvasLocation" x="303" y="354"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PlopixKonamiCode" width="800" height="75"/>
+    </resources>
 </document>
