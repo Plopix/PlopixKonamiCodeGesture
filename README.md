@@ -3,7 +3,7 @@ Plopix Konami Code Gesture
 
 Simple implementation of the KonamiCode gesture in Swift. 
 
-Code: Up, Up, Down, Down, Left, Right, Left, Right, Tap, Tap
+![alt text](https://raw.githubusercontent.com/Plopix/PlopixKonamiCodeGesture/master/StandoloneProject/KonamiCode/Images.xcassets/PlopixKonamiCode.imageset/Plopix_Konami_Code.png "Up, Up, Down, Down, Left, Right, Left, Right, Tap, Tap")
 
 Including into your project
 ---------------------------
