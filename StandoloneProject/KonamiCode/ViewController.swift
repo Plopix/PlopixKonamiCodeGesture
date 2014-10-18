@@ -10,18 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var stateLabel : UILabel!;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         let recognizer = PlopixKonamiGesture(target: self, action: "launchEasterEgg:")
-        view.addGestureRecognizer(recognizer)
-        
+        view.addGestureRecognizer(recognizer)        
     }
-
     
     func launchEasterEgg(recognizer: UITapGestureRecognizer) {
         if ( recognizer.state == .Ended ) {
-            println("tapped button")
+            stateLabel.text = "Yeah you did it!"
+        }
+        if ( recognizer.state == .Failed || recognizer.state == .Cancelled ) {
+            stateLabel.text = "Try again!"
         }
     }
     override func didReceiveMemoryWarning() {
