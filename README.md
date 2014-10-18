@@ -22,17 +22,35 @@ If you don't already have a bridge header file in your app, the easiest way to g
 Usage
 -----
 
-	override func viewDidLoad() {
-        super.viewDidLoad()
-        let recognizer = PlopixKonamiGesture(target: self, action: "launchEasterEgg:")
-        view.addGestureRecognizer(recognizer)        
-    }
-    
-    func launchEasterEgg(recognizer: UITapGestureRecognizer) {
+**Swift:**
+
+	let recognizer = PlopixKonamiGesture(target: self, action: "launchEasterEgg:")
+	view.addGestureRecognizer(recognizer)        
+
+	//——     
+	
+    func launchEasterEgg(recognizer: UIGestureRecognizer) {
         if ( recognizer.state == .Ended ) {
 			// do what you want
         }
     }
+    
+**Objectice-c:**
+
+	// Don’t forget to add #import "[ProjectName]-Swift.h" 
+	
+    PlopixKonamiGesture *recognizer = [[PlopixKonamiGesture alloc] initWithTarget:self action:@selector(launchEasterEgg:)];
+    [self.view addGestureRecognizer:recognizer];
+
+	//—— 
+	
+	- (void) launchEasterEgg:(UIGestureRecognizer *) recognizer {
+    	if (recognizer.state == UIGestureRecognizerStateEnded ) {
+        	// do what you want
+    	}
+	}
+
+
 
 You can also look at the example projet.
 
