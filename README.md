@@ -8,7 +8,7 @@ Simple implementation of the KonamiCode gesture in Swift.
 Including into your project
 ---------------------------
 
-Just drag and drop PlopixKonamiGesture.swift file into your project.
+Just drag and drop *PlopixKonamiGesture.swift* file into your project.
 
 The UIGestureRecognizerSubclass.h extension header is not included in the UIKit Swift framework. In order to compile code that uses those methods, you have to #import that header file inside an Objective-C Bridging Header for your Xcode project.
 
