@@ -38,7 +38,6 @@
 		7F6F77AB19F1059E0026F906 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F6F77AC19F1059E0026F906 /* KonamiCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KonamiCodeTests.swift; sourceTree = "<group>"; };
 		7F6F77B619F106070026F906 /* PlopixKonamiGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlopixKonamiGesture.swift; path = ../PlopixKonamiGesture.swift; sourceTree = "<group>"; };
-		7F7E1C6719F244B800F3DDBC /* KonamiCode-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "KonamiCode-Bridging-Header.h"; path = "../KonamiCode-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +61,6 @@
 		7F6F778819F1059E0026F906 = {
 			isa = PBXGroup;
 			children = (
-				7F7E1C6719F244B800F3DDBC /* KonamiCode-Bridging-Header.h */,
 				7F6F77B619F106070026F906 /* PlopixKonamiGesture.swift */,
 				7F6F779319F1059E0026F906 /* KonamiCode */,
 				7F6F77A919F1059E0026F906 /* KonamiCodeTests */,
@@ -346,7 +344,6 @@
 				INFOPLIST_FILE = KonamiCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "../KonamiCode-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -359,7 +356,6 @@
 				INFOPLIST_FILE = KonamiCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "../KonamiCode-Bridging-Header.h";
 			};
 			name = Release;
 		};

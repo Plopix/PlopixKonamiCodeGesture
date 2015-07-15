@@ -8,6 +8,7 @@
 */
 
 import UIKit
+import UIKit.UIGestureRecognizerSubclass
 
 /**
     Allow you to track the KomamiTouchCode
