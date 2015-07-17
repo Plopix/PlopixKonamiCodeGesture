@@ -8,6 +8,7 @@
 */
 
 import UIKit
+import UIKit.UIGestureRecognizerSubclass
 
 /**
     Allow you to track the KomamiTouchCode
@@ -189,13 +190,13 @@ class PlopixKonamiGesture: UIGestureRecognizer {
     /**
         Touches Began
     */
-    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!)  {
+    override func touchesBegan(touches: Set<NSObject>!, withEvent event: UIEvent!) {
         if ( event.touchesForGestureRecognizer(self)?.count > 1 ) {
             // give a direct failed when more than touches are detected
             self.state = .Failed;
             return
         }
-        let touch:UITouch = touches.anyObject() as UITouch
+        let touch:UITouch = touches.first as! UITouch
         self.startingPoint = touch.locationInView(self.view)
         if ( self.state == .Changed ) {
             // do nothing now
@@ -213,8 +214,8 @@ class PlopixKonamiGesture: UIGestureRecognizer {
     /**
         Touches Moved
     */
-    override func touchesMoved(touches: NSSet!, withEvent event: UIEvent!) {
-        let touch:UITouch = touches.anyObject() as UITouch
+    override func touchesMoved(touches: Set<NSObject>!, withEvent event: UIEvent!) {
+        let touch:UITouch = touches.first as! UITouch
         if ( !self.isOnHisWay(touch.locationInView(self.view)) ) {
             self.state = .Failed;
         }
@@ -223,8 +224,8 @@ class PlopixKonamiGesture: UIGestureRecognizer {
     /**
         Touches Ended
     */
-    override func touchesEnded(touches: NSSet!, withEvent event: UIEvent!) {
-        let touch:UITouch = touches.anyObject() as UITouch
+    override func touchesEnded(touches: Set<NSObject>!, withEvent event: UIEvent!) {
+        let touch:UITouch = touches.first as! UITouch!
         let endPoint:CGPoint = touch.locationInView(self.view)
         
         if ( self.isOnHisWay(endPoint) && self.hasReachMinDistance(endPoint)  ) {
@@ -244,7 +245,7 @@ class PlopixKonamiGesture: UIGestureRecognizer {
     /**
         Touches Cancelled
     */
-    override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesCancelled(touches: Set<NSObject>!, withEvent event: UIEvent!) {
         self.reset()
     }
     
