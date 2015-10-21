@@ -79,7 +79,7 @@ class PlopixKonamiGesture: UIGestureRecognizer {
     /**
         init
     */
-    override init(target: AnyObject, action: Selector) {
+    override init(target: AnyObject?, action: Selector) {
         self.direction = Direction()
         self.konamiCode = [
             direction.up,direction.up,
@@ -94,7 +94,7 @@ class PlopixKonamiGesture: UIGestureRecognizer {
         Get the next vector
     */
     private func nextVector() -> CGVector? {
-        var succeedGesture = currentCode.count
+        let succeedGesture = currentCode.count
         if ( succeedGesture == konamiCode.count) {
             return nil;
         }
@@ -112,8 +112,8 @@ class PlopixKonamiGesture: UIGestureRecognizer {
         if ( direction.isNeutral( next! ) ) {
             return true;
         }
-        var deltaX: CGFloat = point.x - startingPoint.x;
-        var deltaY: CGFloat = point.y - startingPoint.y;
+        let deltaX: CGFloat = point.x - startingPoint.x;
+        let deltaY: CGFloat = point.y - startingPoint.y;
         
         // check the diversion
         if ( direction.isUp( next! ) || direction.isDown( next! ) ) {
@@ -156,8 +156,8 @@ class PlopixKonamiGesture: UIGestureRecognizer {
         We need at least a minimum distance
     */
     private func hasReachMinDistance( point: CGPoint ) -> Bool {
-        var deltaX: CGFloat = point.x - startingPoint.x;
-        var deltaY: CGFloat = point.y - startingPoint.y;
+        let deltaX: CGFloat = point.x - startingPoint.x;
+        let deltaY: CGFloat = point.y - startingPoint.y;
         let next: CGVector? = self.nextVector()
         if (( next)  == nil ) {
             return true
@@ -183,20 +183,20 @@ class PlopixKonamiGesture: UIGestureRecognizer {
         override method
         This gesture doesn't prevent anything
     */
-    override func canPreventGestureRecognizer(preventedGestureRecognizer: UIGestureRecognizer!) -> Bool {
+    override func canPreventGestureRecognizer(preventedGestureRecognizer: UIGestureRecognizer) -> Bool {
         return false;
     }
     
     /**
         Touches Began
     */
-    override func touchesBegan(touches: Set<NSObject>!, withEvent event: UIEvent!) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent) {
         if ( event.touchesForGestureRecognizer(self)?.count > 1 ) {
             // give a direct failed when more than touches are detected
             self.state = .Failed;
             return
         }
-        let touch:UITouch = touches.first as! UITouch
+        let touch:UITouch = touches.first!
         self.startingPoint = touch.locationInView(self.view)
         if ( self.state == .Changed ) {
             // do nothing now
@@ -214,8 +214,8 @@ class PlopixKonamiGesture: UIGestureRecognizer {
     /**
         Touches Moved
     */
-    override func touchesMoved(touches: Set<NSObject>!, withEvent event: UIEvent!) {
-        let touch:UITouch = touches.first as! UITouch
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent) {
+        let touch:UITouch = touches.first!
         if ( !self.isOnHisWay(touch.locationInView(self.view)) ) {
             self.state = .Failed;
         }
@@ -224,8 +224,8 @@ class PlopixKonamiGesture: UIGestureRecognizer {
     /**
         Touches Ended
     */
-    override func touchesEnded(touches: Set<NSObject>!, withEvent event: UIEvent!) {
-        let touch:UITouch = touches.first as! UITouch!
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent) {
+        let touch:UITouch = touches.first as UITouch!
         let endPoint:CGPoint = touch.locationInView(self.view)
         
         if ( self.isOnHisWay(endPoint) && self.hasReachMinDistance(endPoint)  ) {
@@ -245,7 +245,7 @@ class PlopixKonamiGesture: UIGestureRecognizer {
     /**
         Touches Cancelled
     */
-    override func touchesCancelled(touches: Set<NSObject>!, withEvent event: UIEvent!) {
+    override func touchesCancelled(touches: Set<UITouch>, withEvent event: UIEvent) {
         self.reset()
     }
     
