@@ -26,7 +26,7 @@ Usage
 
 **Swift:**
 
-	let recognizer = PlopixKonamiGesture(target: self, action: "launchEasterEgg:")
+    let recognizer = PlopixKonamiGesture(target: self, action: #selector(ViewController.launchEasterEgg(_:)))
 	view.addGestureRecognizer(recognizer)        
 
 	//——     
