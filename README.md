@@ -10,23 +10,13 @@ Including into your project
 
 Just drag and drop *PlopixKonamiGesture.swift* file into your project.
 
-*Before Swift 1.2*
-
-The UIGestureRecognizerSubclass.h extension header is not included in the UIKit Swift framework. In order to compile code that uses those methods, you have to #import that header file inside an Objective-C Bridging Header for your Xcode project.
-
-So don’t forget to add the #import statement in your *-Bridging-Header.h
-
-	#import <UIKit/UIGestureRecognizerSubclass.h>
-	
-If you don't already have a bridge header file in your app, the easiest way to get one is to add an Obj-c class into your project, and Xcode will ask if you want to add one. You can then delete the Obj-c class.
-
-
 Usage
 -----
 
 **Swift:**
 
-    let recognizer = PlopixKonamiGesture(target: self, action: #selector(ViewController.launchEasterEgg(_:)))
+```swift
+    let recognizer = PlopixKonamiGesture(target: self, action: #selector(ViewController.launchEasterEgg))
 	view.addGestureRecognizer(recognizer)        
 
 	//——     
@@ -37,8 +27,10 @@ Usage
         }
     }
     
+```
 **Objectice-c:**
 
+```objc
 	// Don’t forget to add #import "[ProjectName]-Swift.h" 
 	
     PlopixKonamiGesture *recognizer = [[PlopixKonamiGesture alloc] initWithTarget:self action:@selector(launchEasterEgg:)];
@@ -51,7 +43,7 @@ Usage
         	// do what you want
     	}
 	}
-
+```
 
 
 You can also look at the example projet.
