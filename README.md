@@ -30,6 +30,7 @@ Usage
 ```
 **Objectice-c:**
 
+```objc
 	// Don’t forget to add #import "[ProjectName]-Swift.h" 
 	
     PlopixKonamiGesture *recognizer = [[PlopixKonamiGesture alloc] initWithTarget:self action:@selector(launchEasterEgg:)];
@@ -42,7 +43,7 @@ Usage
         	// do what you want
     	}
 	}
-
+```
 
 
 You can also look at the example projet.
