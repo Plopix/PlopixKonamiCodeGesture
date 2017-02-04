@@ -1,25 +1,49 @@
 /*
-* This file is part of the PlopixKonamiGesture package.
-*
-* (c) Sébastien Morel aka Plopix <morel.seb@gmail.com>
-*
-* For the full copyright and license information(MIT), please view the LICENSE
-* file that was distributed with this source code.
-*/
+ * This file is part of the PlopixKonamiGesture package.
+ *
+ * (c) Sébastien Morel aka Plopix <morel.seb@gmail.com>
+ *
+ * For the full copyright and license information(MIT), please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 import UIKit
 import UIKit.UIGestureRecognizerSubclass
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 /**
-    Allow you to track the KomamiTouchCode
-    Up,up,Down,Down,Left,Right,Left,Right,Tap,Tap
-    We transform BA by Tap Tap for obvious simple reason
-*/
+ Allow you to track the KomamiTouchCode
+ Up,up,Down,Down,Left,Right,Left,Right,Tap,Tap
+ We transform BA by Tap Tap for obvious simple reason
+ */
 class PlopixKonamiGesture: UIGestureRecognizer {
     
     /**
-        Take care of the direction vectors
-    */
+     Take care of the direction vectors
+     */
     struct Direction {
         var up: CGVector
         var down: CGVector
@@ -27,59 +51,59 @@ class PlopixKonamiGesture: UIGestureRecognizer {
         var right: CGVector
         var neutral: CGVector
         init() {
-            neutral = CGVectorMake(  0,  0 )
-            up      = CGVectorMake(  0, -1 )
-            down    = CGVectorMake(  0,  1 )
-            left    = CGVectorMake( -1,  0 )
-            right   = CGVectorMake(  1,  0 )
+            neutral = CGVector(  dx: 0,  dy: 0 )
+            up      = CGVector(  dx: 0, dy: -1 )
+            down    = CGVector(  dx: 0,  dy: 1 )
+            left    = CGVector( dx: -1,  dy: 0 )
+            right   = CGVector(  dx: 1,  dy: 0 )
         }
-        func isUp( vector: CGVector ) -> Bool {
+        func isUp( _ vector: CGVector ) -> Bool {
             return vector == self.up
         }
-        func isDown( vector: CGVector ) -> Bool {
+        func isDown( _ vector: CGVector ) -> Bool {
             return vector == self.down
         }
-        func isRight( vector: CGVector ) -> Bool {
+        func isRight( _ vector: CGVector ) -> Bool {
             return vector == self.right
         }
-        func isLeft( vector: CGVector ) -> Bool {
+        func isLeft( _ vector: CGVector ) -> Bool {
             return vector == self.left
         }
-        func isNeutral( vector: CGVector ) -> Bool {
+        func isNeutral( _ vector: CGVector ) -> Bool {
             return vector == self.neutral
         }
     }
     
     /**
-        Direction instance
-    */
-    private let direction : Direction
+     Direction instance
+     */
+    fileprivate let direction : Direction
     
     /**
-        Configuration
-    */
-    private let swipeDistanceTolerance : CGFloat = 50.0
-    private let swipeMinDistance : CGFloat = 50.0
-    
-    /** 
-        Store the Konami Code
-    */
-    private var konamiCode: [CGVector] = []
+     Configuration
+     */
+    fileprivate let swipeDistanceTolerance : CGFloat = 50.0
+    fileprivate let swipeMinDistance : CGFloat = 50.0
     
     /**
-        Store the user code
-    */
-    private var currentCode : [CGVector] = []
+     Store the Konami Code
+     */
+    fileprivate var konamiCode: [CGVector] = []
     
     /**
-        Store the starting point of the gesture
-    */
-    private var startingPoint: CGPoint = CGPointZero
+     Store the user code
+     */
+    fileprivate var currentCode : [CGVector] = []
     
     /**
-        init
-    */
-    override init(target: AnyObject?, action: Selector) {
+     Store the starting point of the gesture
+     */
+    fileprivate var startingPoint: CGPoint = CGPoint.zero
+    
+    /**
+     init
+     */
+    override init(target: Any?, action: Selector?) {
         self.direction = Direction()
         self.konamiCode = [
             direction.up,direction.up,
@@ -91,9 +115,9 @@ class PlopixKonamiGesture: UIGestureRecognizer {
     }
     
     /**
-        Get the next vector
-    */
-    private func nextVector() -> CGVector? {
+     Get the next vector
+     */
+    fileprivate func nextVector() -> CGVector? {
         let succeedGesture = currentCode.count
         if ( succeedGesture == konamiCode.count) {
             return nil;
@@ -102,9 +126,9 @@ class PlopixKonamiGesture: UIGestureRecognizer {
     }
     
     /**
-        Cancef if the user deviate
-    */
-    private func isOnHisWay( point: CGPoint ) -> Bool {
+     Cancef if the user deviate
+     */
+    fileprivate func isOnHisWay( _ point: CGPoint ) -> Bool {
         let next: CGVector? = self.nextVector()
         if (( next)  == nil ) {
             return true
@@ -153,9 +177,9 @@ class PlopixKonamiGesture: UIGestureRecognizer {
     }
     
     /**
-        We need at least a minimum distance
-    */
-    private func hasReachMinDistance( point: CGPoint ) -> Bool {
+     We need at least a minimum distance
+     */
+    fileprivate func hasReachMinDistance( _ point: CGPoint ) -> Bool {
         let deltaX: CGFloat = point.x - startingPoint.x;
         let deltaY: CGFloat = point.y - startingPoint.y;
         let next: CGVector? = self.nextVector()
@@ -180,53 +204,53 @@ class PlopixKonamiGesture: UIGestureRecognizer {
     }
     
     /**
-        override method
-        This gesture doesn't prevent anything
-    */
-    override func canPreventGestureRecognizer(preventedGestureRecognizer: UIGestureRecognizer) -> Bool {
+     override method
+     This gesture doesn't prevent anything
+     */
+    override func canPrevent(_ preventedGestureRecognizer: UIGestureRecognizer) -> Bool {
         return false;
     }
     
     /**
-        Touches Began
-    */
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent) {
-        if ( event.touchesForGestureRecognizer(self)?.count > 1 ) {
+     Touches Began
+     */
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
+        if ( event.touches(for: self)?.count > 1 ) {
             // give a direct failed when more than touches are detected
-            self.state = .Failed;
+            self.state = .failed;
             return
         }
         let touch:UITouch = touches.first!
-        self.startingPoint = touch.locationInView(self.view)
-        if ( self.state == .Changed ) {
+        self.startingPoint = touch.location(in: self.view)
+        if ( self.state == .changed ) {
             // do nothing now
             //@todo: add time check
             return
         }
-        if ( self.state == .Possible ) {
+        if ( self.state == .possible ) {
             // only the first time
-            self.state = .Began;
+            self.state = .began;
             return
         }
-        self.state = .Failed;
+        self.state = .failed;
     }
     
     /**
-        Touches Moved
-    */
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent) {
+     Touches Moved
+     */
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
         let touch:UITouch = touches.first!
-        if ( !self.isOnHisWay(touch.locationInView(self.view)) ) {
-            self.state = .Failed;
+        if ( !self.isOnHisWay(touch.location(in: self.view)) ) {
+            self.state = .failed;
         }
     }
     
     /**
-        Touches Ended
-    */
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent) {
+     Touches Ended
+     */
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent) {
         let touch:UITouch = touches.first as UITouch!
-        let endPoint:CGPoint = touch.locationInView(self.view)
+        let endPoint:CGPoint = touch.location(in: self.view)
         
         if ( self.isOnHisWay(endPoint) && self.hasReachMinDistance(endPoint)  ) {
             //go next or finish
@@ -235,26 +259,26 @@ class PlopixKonamiGesture: UIGestureRecognizer {
                 self.currentCode.append(next!)
             }
             if ( self.currentCode == self.konamiCode ) {
-                self.state = .Ended;
+                self.state = .ended;
             }
             return
         }
-        self.state = .Failed;
+        self.state = .failed;
     }
     
     /**
-        Touches Cancelled
-    */
-    override func touchesCancelled(touches: Set<UITouch>, withEvent event: UIEvent) {
+     Touches Cancelled
+     */
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent) {
         self.reset()
     }
     
     /**
-        Touches Reset
-    */
+     Touches Reset
+     */
     override func reset() {
         currentCode = []
-        self.startingPoint = CGPointZero
+        self.startingPoint = CGPoint.zero
         super.reset()
     }
 }
